@@ -1,9 +1,27 @@
-import React, { useState } from 'react'
+import axios from 'axios';
+import React from '../../utils/axios'
+import  { useEffect,useState } from 'react'
 import { Link } from 'react-router-dom'
 
+
 const Topnav = () => {
+
     const [query,setquery]=useState("");
-    console.log(query);
+    const [searches,setsearches]=useState([])
+    const GetSerches = async()=>{
+      try{
+        const {data} =await axios.get(`/search/multi?query=${query}`);
+        console.log(data);
+        setsearches(data.results);
+      }
+      catch(error){
+        console.log("Error: ",error);
+      }
+    };
+    useEffect(()=>{
+      GetSerches();
+    },[query]);
+  
   return (
     <div className='w-full h-[10vh]  relative flex justify-start  items-center ml-[20%]'>
         <i class="text-zinc-400 text-2xl ri-search-line"></i>
@@ -20,11 +38,15 @@ const Topnav = () => {
 
     
         <div className='absolute w-[50%] max-h-[50vh] bg-zinc-200 top-[90%] overflow-auto'>
-
-             {/* <Link className='hover:text-black hover:bg-zinc-300 duration-300 font-semibold text-zinc-600 p-10  bg-zinc-200  flex justify-center border-zinc-100'>
+          {searches.map((s,i)=>(
+                          <Link key={i}
+                          className='hover:text-black hover:bg-zinc-300 duration-300 font-semibold text-zinc-600 p-10  bg-zinc-200  flex justify-center border-zinc-100'>
             <img src="" alt="" />
-            <span>Hello Everyone</span>
-            </Link> */}
+            <span>{s.name||s.original_name|| s.original_title}</span>
+            </Link> 
+
+
+          ))}
 
 
 
