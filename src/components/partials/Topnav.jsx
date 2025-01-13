@@ -1,7 +1,9 @@
-import axios from 'axios';
-import React from '../../utils/axios'
+
+import axios from '../../utils/axios'
 import  { useEffect,useState } from 'react'
 import { Link } from 'react-router-dom'
+import noimage from '../../public/no image.png'
+
 
 
 const Topnav = () => {
@@ -32,7 +34,7 @@ const Topnav = () => {
          {query.length>0 &&(
 
         <i onClick={()=>setquery("")}
-         class=" text-zinc-400 text-2xl ri-close-line"
+         className=" text-zinc-400 text-2xl ri-close-line"
          ></i>
       )}
 
@@ -41,8 +43,16 @@ const Topnav = () => {
           {searches.map((s,i)=>(
                           <Link key={i}
                           className='hover:text-black hover:bg-zinc-300 duration-300 font-semibold text-zinc-600 p-10  bg-zinc-200  flex justify-center border-zinc-100'>
-            <img src="" alt="" />
-            <span>{s.name||s.original_name|| s.original_title}</span>
+            <img className='w-[10vh] h-[10vh] object-cover rounded mr-5 shodow-lg'
+            src= {
+              s.backdrop_path||s.profile_path?
+              `https://image.tmdb.org/t/p/original/${s.backdrop_path||s.profile_path} `:noimage}
+
+              alt="" />
+            <span>{s.name||
+            s.original_name|| 
+            s.original_title}
+            </span>
             </Link> 
 
 
