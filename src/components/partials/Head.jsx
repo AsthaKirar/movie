@@ -15,7 +15,8 @@ const Head = ({ data }) => {
     >
         <h1 className='w-[70%] text-5xl font-black text-white'>
         {data.name||
-            data.original_name|| 
+        data.title
+        ||data.original_name|| 
             data.original_title}
 </h1>
 <p className='w-[70%] text-white mb-3 mt-3'>{data.overview.slice(0,200)}...<Link className='text-blue-400'>more</Link>
@@ -31,3 +32,6 @@ const Head = ({ data }) => {
 };
 
 export default Head;
+
+
+

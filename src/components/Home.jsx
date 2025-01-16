@@ -63,8 +63,9 @@ console.log(trending)
           <HorizontalCards data={trending} />
         </div>
       </>
-    ) : (
-      <h1>Loading</h1>
+    ) 
+    : (
+      <Loading/>
     );
     
 };
