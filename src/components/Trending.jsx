@@ -3,6 +3,8 @@ import Topnav from './partials/Topnav';
 import Dropdown from './partials/Dropdown';
 import axios from '../utils/axios';
 import Loading from './Loading';
+import { useNavigate } from 'react-router-dom';
+import Cards from './partials/Cards';
 
 
 const Trending = () => {
@@ -32,7 +34,7 @@ const Trending = () => {
 
   return trending ? (
     <div className='px-[3%] w-screen h-screen overflow-hidden overflow-y-auto'>
-        <div className='w-full bg-red-100 flex items-center justify-between'>
+        <div className='w-full flex items-center justify-between'>
             <h1 className=' text-2xl text-zinc-400 font-semibold'>
             <i 
             onClick={()=>navigate(-1)}

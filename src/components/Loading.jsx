@@ -1,4 +1,6 @@
-import loader from '/loader.gif'
+
+
+import loader from '../public/loader.gif'
 
 const Loading = () => {
   return (

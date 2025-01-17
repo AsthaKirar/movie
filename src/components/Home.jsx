@@ -3,6 +3,8 @@ import SideNav from "./partials/SideNav";
 import Topnav from "./partials/Topnav";
 import Head from "./partials/Head";
 import axios  from "../utils/axios";
+import Loading from "./Loading";
+import Dropdown from "./partials/Dropdown";
 import HorizontalCards from "./partials/HorizontalCards";
 const Home = () => {
     document.title = "MovieApp"
