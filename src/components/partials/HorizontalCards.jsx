@@ -1,5 +1,5 @@
 import React from 'react'
-import Dropdown from './Dropdown';
+import Dropdown from '../partials/Dropdown';
 
 const HorizontalCards = ({data}) => {
   return (
@@ -16,7 +16,7 @@ const HorizontalCards = ({data}) => {
             d.original_title||
             d.title}</h1>
 <p className=' '
->{d.overview.slice(0,50)}...
+>{(d.overview ||'').slice(0,50)}...
 <span className='text-blue-300'>more
 </span>
 

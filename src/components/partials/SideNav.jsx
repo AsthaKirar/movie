@@ -13,10 +13,10 @@ const SideNav = () => {
             <h1 className='text-white font-semi-bold text-xl mt-10 mb-5'>
                 New Feeds</h1>
                 <Link to="/trending" className='hover:bg-[rgb(101,86,205)] hover:text-white rounded-lg duration-300 p-2'> <i class="ri-fire-fill"></i>Trending</Link>
-                <Link className='hover:bg-[#6556CD] hover:text-white rounded-lg duration-300 p-2'> <i class=" mr-2 ri-bard-fill"></i>Popular</Link>
-                <Link className='hover:bg-[#6556CD] hover:text-white rounded-lg  duration p-2'> <i class=" mr-2 ri-movie-fill"></i>Movie</Link>
-                <Link className='hover:bg-[#6556CD] hover:text-white rounded-lg duration-300 p-2'> <i class=" mr-2 ri-tv-2-fill"></i>Tv show</Link>
-                <Link className='hover:bg-[#6556CD] hover:text-white rounded-lg duration-300 p-2'> <i class=" mr-2 ri-team-line"></i>People</Link>
+                <Link to="/popular" className='hover:bg-[#6556CD] hover:text-white rounded-lg duration-300 p-2'> <i class=" mr-2 ri-bard-fill"></i>Popular</Link>
+                <Link to="/movie" className='hover:bg-[#6556CD] hover:text-white rounded-lg  duration p-2'> <i class=" mr-2 ri-movie-fill"></i>Movie</Link>
+                <Link to="/tvshows" className='hover:bg-[#6556CD] hover:text-white rounded-lg duration-300 p-2'> <i class=" mr-2 ri-tv-2-fill"></i>Tv show</Link>
+                <Link to="/people" className='hover:bg-[#6556CD] hover:text-white rounded-lg duration-300 p-2'> <i class=" mr-2 ri-team-line"></i>People</Link>
         </nav>
         <hr className='border-none h-1 bg-zinc-400' />
         <nav className='flex flex-col text-xl text-zinc-300 gap-3'>
