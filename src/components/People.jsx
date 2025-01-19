@@ -61,7 +61,7 @@ const refreshHandler = async() =>{
         <h1 className=' text-2xl text-zinc-400 font-semibold'>
         <i 
         onClick={()=>navigate(-1)}
-class="hover:text-[#6556CD] ri-arrow-left-line"></i> {" "}People <small className=" ml-2 text-sm text-zinc-600">({category})</small>
+class="hover:text-[#6556CD] ri-arrow-left-line"></i> {" "}People 
 </h1>
 <div className='flex items-center w-[80%]'>
 <Topnav/>
