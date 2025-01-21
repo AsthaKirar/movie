@@ -11,9 +11,6 @@ import Tvshowsdetails from "./components/Tvshowsdetails";
 import Peopledetails from "./components/Peopledetails";
 
 
-
- 
-
 const App = () => {
   return (
   
@@ -22,33 +19,18 @@ const App = () => {
         <Route path='/'element={<Home/>}/>
         <Route path='/trending'element={<Trending/>}/>
         <Route path='/popular'element={<Popular/>}/>
-        <Route path='/movie'element={<Movie/>}>
+        <Route path='/movie'element={<Movie/>}/>
         <Route path="/movie/details/:id"
          element={<Moviedetails/>}/>
-        </Route>
-        <Route path='/tvshows'element={<Tvshows/>}>
+
+        <Route path='/tvshows'element={<Tvshows/>}/>
         <Route path="/tvshows/details/:id"
          element={<Tvshowsdetails/>}/>
 
-
-
-        </Route>
-        <Route path='/people'element={<People/>}>{" "}
+        <Route path='/people'element={<People/>}/>
         <Route path="/people/details/:id"
          element={<Peopledetails/>}/>
-
-        </Route>
-
-
-
-
-
-
-
-      
-
-        
-      </Routes>
+  </Routes>
     </div>
   
   )

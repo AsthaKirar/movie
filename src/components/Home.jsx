@@ -59,7 +59,7 @@ console.log(trending)
                   <div className=' flex justify-between p-5'>
                   <h1 className=' text-3xl font-semibold text-zinc-400'>
                       Trending</h1>
-                      <Dropdown title="Filter" option={["tv","movie","all"]} func={(e)=>setcategory(e.target.value)}/>
+                      <Dropdown title="Filter" options={["tv","movie","all"]} func={(e)=>setcategory(e.target.value)}/>
                   </div>
           
           <HorizontalCards data={trending} />

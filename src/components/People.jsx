@@ -76,7 +76,7 @@ class="hover:text-[#6556CD] ri-arrow-left-line"></i> {" "}People
     hasMore={hasMore}
     loader={<h1>Loading...</h1>}>
 
-    <Cards data={tvshows} title={category}/>
+    <Cards data={tvshows} title="people"/>
 
     </InfiniteScroll>
 </div>

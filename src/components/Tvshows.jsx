@@ -84,7 +84,7 @@ func={(e)=> setcategory(e.target.value)}
     hasMore={hasMore}
     loader={<h1>Loading...</h1>}>
 
-    <Cards data={tvshows} title={category}/>
+    <Cards data={tvshows} title="tvshows"/>
 
     </InfiniteScroll>
 </div>

@@ -19,7 +19,7 @@ const Head = ({ data }) => {
         ||data.original_name|| 
             data.original_title}
 </h1>
-<p className='w-[70%] text-white mb-3 mt-3'>{data.overview.slice(0,200)}...<Link className='text-blue-400'>more</Link>
+<p className='w-[70%] text-white mb-3 mt-3'>{data.overview.slice(0,200)}...<Link to={`/${data.media_type}/details/${data.id}`} className='text-blue-400'>more</Link>
 
 </p>
 <p className='text-white flex gap-x-5'>
