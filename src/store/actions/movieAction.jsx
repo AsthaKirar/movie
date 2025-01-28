@@ -23,6 +23,8 @@ export const asyncloadmovie = (id) => async(dispatch,getState)=>{
         
 
        }
+       dispatch(loadmovie(theultimatedetails))
+
        console.log(theultimatedetails);
 
 
