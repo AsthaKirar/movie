@@ -29,6 +29,7 @@ import { asyncloadmovie, removemovie } from '../store/actions/movieAction';
 
 const Moviedetails = () => {
   const dispatch = useDispatch();
+  useSelector(state=>state.movie)
   const { id } = useParams();
 
   useEffect(() => {
