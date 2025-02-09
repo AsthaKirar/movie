@@ -45,6 +45,7 @@ className="hover:text-[#6556CD] ri-arrow-left-line"></Link>
 
 
       </nav>
+
       {/*part 2 poster and details*/}
       <div className='w-full flex'>
       <img className= 'shadow-[8px_17px_38px_rgba(0,0,0,.5)] w-[40vh] object-cover' 
@@ -52,7 +53,9 @@ className="hover:text-[#6556CD] ri-arrow-left-line"></Link>
         ${info.backdrop_path || info.poster_path}`} 
         alt="" />
 
-      </div>
+
+<div>
+
       <div className='mt-5'>
         { info.watchproviders && info.watchproviders.flatrate &&
         info.watchproviders.flatrate.map(w =>(
@@ -83,7 +86,9 @@ className="hover:text-[#6556CD] ri-arrow-left-line"></Link>
         ))}
 
       </div>
-    
+      </div>
+
+      </div>
 
     </div>
   ):(
